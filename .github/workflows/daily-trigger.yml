@@ -1,0 +1,21 @@
+name: Daily Make Webhook Trigger
+
+on:
+  schedule:
+    # Запуск щодня о 14:00 UTC (17:00 за Києвом)
+    - cron: '0 14 * * *'
+  
+  # Дозволити ручний запуск для тестування
+  workflow_dispatch:
+
+jobs:
+  trigger-make:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Call Make Webhook
+      run: |
+        curl -X POST "https://hook.eu2.make.com/beyhktkvo9qeb5ve0klv7jqq6fsdlf9i"
+      
+    - name: Log completion
+      run: echo "Webhook sent successfully at $(date)"
