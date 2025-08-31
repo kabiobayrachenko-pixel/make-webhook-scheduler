@@ -15,7 +15,7 @@ jobs:
     steps:
     - name: Call Make Webhook
       run: |
-        curl -X POST "https://hook.eu2.make.com/days346eityoznmulw1gpspy49e92ljd"
+        curl -X POST "https://hook.eu2.make.com/kmpam4p1r331cll82doqdpdwsvellnul"
       
     - name: Log completion
       run: echo "Webhook sent successfully at $(date)"
